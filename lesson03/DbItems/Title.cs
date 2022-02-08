@@ -12,14 +12,7 @@ namespace lesson03.DbItems
     {
         public int TitleId { get; set; }
         public string Name { get; set; }
-    }
 
-    public class TitleConfiguration : IEntityTypeConfiguration<Title>
-    {
-        public void Configure(EntityTypeBuilder<Title> builder)
-        {
-            builder.ToTable("Title").HasKey(t => t.TitleId);
-            builder.Property(t => t.Name).HasColumnName("Name").IsRequired().HasMaxLength(255)
-        }
+        public Employee Employee { get; set; }
     }
 }
