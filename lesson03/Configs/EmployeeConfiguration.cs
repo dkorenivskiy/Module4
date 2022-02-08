@@ -18,19 +18,6 @@ namespace lesson03.Configs
             builder.Property(e => e.LastName).HasColumnName("LastName").IsRequired();
             builder.Property(e => e.HiredDate).HasColumnName("HiredDate");
             builder.Property(e => e.DateOfBirth).HasColumnName("DateOfBirth");
-
-            builder.HasMany(p => p.EmployeeProjects)
-                .WithMany(e => e.Employees)
-                .UsingEntity<Dictionary<string, object>>(
-                "EmployeeProject",
-                j => j
-                .HasOne<EmployeeProject>()
-                .WithMany()
-                .HasForeignKey("ProjectId"),
-                j => j
-                .HasOne<Employee>()
-                .WithMany()
-                .HasForeignKey("EmployeeId"));
         }
     }
 }

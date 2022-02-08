@@ -11,9 +11,9 @@ namespace lesson03.DbItems
         public int EmployeeProjectId { get; set; }
         public int Rate { get; set; }
         public int EmployeeId { get; set; }
-        public List<Employee> Employees { get; set; } = new List<Employee>();
+        public Employee Employee { get; set; }
         public int ProjectId { get; set; }
-        public List<Project> Projects { get; set; } = new List<Project>();
+        public Project Project { get; set; } 
         public DateTime StertedTime { get; set; }
     }
 }

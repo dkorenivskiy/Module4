@@ -17,19 +17,6 @@ namespace lesson03.Configs
             builder.Property(p => p.Name).HasColumnName("Name").IsRequired().HasMaxLength(255);
             builder.Property(p => p.Budget).HasColumnName("Budget");
             builder.Property(p => p.StartedTime).HasColumnName("StartedTime");
-
-            builder.HasMany(p => p.EmployeeProjects)
-                .WithMany(e => e.Projects)
-                .UsingEntity<Dictionary<string, object>>(
-                "EmployeeProject",
-                j => j
-                .HasOne<EmployeeProject>()
-                .WithMany()
-                .HasForeignKey("ProjectId"),
-                j => j
-                .HasOne<Project>()
-                .WithMany()
-                .HasForeignKey("EmployeeId"));
         }
     }
 }

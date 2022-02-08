@@ -14,8 +14,8 @@ namespace lesson03.Configs
         public void Configure(EntityTypeBuilder<Office> builder)
         {
             builder.ToTable("Office").HasKey(p => p.OfficeId);
-            builder.Property(p => p.Title).HasColumnType("Title");
-            builder.Property(p => p.Location).HasColumnType("Location");
+            builder.Property(p => p.Title).HasColumnName("Title");
+            builder.Property(p => p.Location).HasColumnName("Location");
 
             builder.HasOne(d => d.Employee)
                 .WithOne(p => p.Office)

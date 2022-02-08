@@ -17,7 +17,8 @@ namespace lesson03.DbItems
         public Office Office { get; set; }
         public int TitleId { get; set; }
         public Title Title { get; set; }
-
+        
         public List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
+        public List<Project> Projects { get; set; } = new List<Project>();
     }
 }

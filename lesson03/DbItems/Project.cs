@@ -16,5 +16,6 @@ namespace lesson03.DbItems
         public DateTime StartedTime { get; set; }
 
         public List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
+        public List<Employee> Employees { get; set; } = new List<Employee>();
     }
 }
