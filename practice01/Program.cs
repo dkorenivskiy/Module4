@@ -6,6 +6,8 @@ namespace practice01
     {
         static void Main(string[] args)
         {
+            var contactList = new ContactList();
+            contactList.Run();
         }
     }
 }

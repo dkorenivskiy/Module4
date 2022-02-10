@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace practice01
 {
-    public class Contact
+    public class Group
     {
-        public int ContactId { get; set; }
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
         public int GroupId { get; set; }
-        public Group Group { get; set; }
+        public string Title { get; set; }
+        public int ContactId { get; set; }
+        public List<Contact> Contacts { get; set; } = new List<Contact>();
     }
 }
