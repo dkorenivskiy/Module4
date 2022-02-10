@@ -10,7 +10,6 @@ namespace practice01
     {
         public int GroupId { get; set; }
         public string Title { get; set; }
-        public int ContactId { get; set; }
         public List<Contact> Contacts { get; set; } = new List<Contact>();
     }
 }

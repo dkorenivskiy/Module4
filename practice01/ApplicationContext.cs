@@ -13,9 +13,14 @@ namespace practice01
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Group> Groups { get; set; }
 
+        public ApplicationContext()
+        {
+            Database.EnsureCreated();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=EFPractice;User ID=DESKTOP-E5D44D7\dkore;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Database=EFPractice;User Id=dbuser;Password=qwerty;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
